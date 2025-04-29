@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://dtauuqrnpadku" path="res://UI/GradientEditorControl/gradient_editor_control.gd" id="1_hocrq"]
 
-[node name="GradientEditorControl" type="VBoxContainer"]
+[node name="GradientEditorControl" type="VBoxContainer" node_paths=PackedStringArray("gradient_color_rect", "color_pickers")]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -11,19 +11,24 @@ grow_vertical = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 script = ExtResource("1_hocrq")
+gradient_color_rect = NodePath("GradientColorRect")
+color_pickers = {
+NodePath("ColorPickers/ColorPickerButton"): 0.0,
+NodePath("ColorPickers/ColorPickerButton2"): 0.99
+}
 
-[node name="ColorRect" type="ColorRect" parent="."]
+[node name="GradientColorRect" type="TextureRect" parent="."]
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="HBoxContainer" type="HBoxContainer" parent="."]
+[node name="ColorPickers" type="HBoxContainer" parent="."]
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="ColorPickerButton" type="ColorPickerButton" parent="HBoxContainer"]
+[node name="ColorPickerButton" type="ColorPickerButton" parent="ColorPickers"]
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="ColorPickerButton2" type="ColorPickerButton" parent="HBoxContainer"]
+[node name="ColorPickerButton2" type="ColorPickerButton" parent="ColorPickers"]
 layout_mode = 2
 size_flags_horizontal = 3
