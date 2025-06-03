@@ -1,0 +1,95 @@
+[gd_scene load_steps=5 format=3 uid="uid://bb88od8s33txm"]
+
+[ext_resource type="Script" uid="uid://bkumqmbov2qxx" path="res://UI/ColorsThemeGenerator/ColorsGenerators/colors_generators_container.gd" id="1_rle60"]
+[ext_resource type="Script" uid="uid://b4upfvfjr0xd7" path="res://UI/ColorsThemeGenerator/ColorsGenerators/random_colors_generator.gd" id="2_57k2f"]
+[ext_resource type="PackedScene" uid="uid://5a8aagat547e" path="res://UI/RatUI/Scenes/slider_labeled.tscn" id="3_42unl"]
+[ext_resource type="Script" uid="uid://dbrcypaom7iui" path="res://UI/ColorsThemeGenerator/ColorsGenerators/gradient_colors_generator.gd" id="4_rx685"]
+
+[node name="Generators" type="TabContainer"]
+offset_right = 414.0
+offset_bottom = 74.0
+current_tab = 1
+script = ExtResource("1_rle60")
+
+[node name="Random" type="MarginContainer" parent="." node_paths=PackedStringArray("_amount_slider")]
+visible = false
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+script = ExtResource("2_57k2f")
+_amount_slider = NodePath("Generator/Amount")
+metadata/_tab_index = 0
+
+[node name="Generator" type="VBoxContainer" parent="Random"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Amount" parent="Random/Generator" instance=ExtResource("3_42unl")]
+layout_mode = 2
+
+[node name="Label" parent="Random/Generator/Amount" index="0"]
+text = "Amount"
+
+[node name="HSlider" parent="Random/Generator/Amount" index="1"]
+min_value = 2.0
+max_value = 256.0
+value = 2.0
+rounded = true
+allow_greater = true
+
+[node name="Gradient" type="MarginContainer" parent="." node_paths=PackedStringArray("_amount_slider", "start_color", "end_color")]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+script = ExtResource("4_rx685")
+_amount_slider = NodePath("Generator/Amount")
+start_color = NodePath("Generator/Colors/StartColorPickerButton")
+end_color = NodePath("Generator/Colors/EndColorPickerButton2")
+metadata/_tab_index = 1
+
+[node name="Generator" type="VBoxContainer" parent="Gradient"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Amount" parent="Gradient/Generator" instance=ExtResource("3_42unl")]
+layout_mode = 2
+
+[node name="Label" parent="Gradient/Generator/Amount" index="0"]
+text = "Amount"
+
+[node name="HSlider" parent="Gradient/Generator/Amount" index="1"]
+min_value = 2.0
+max_value = 256.0
+value = 2.0
+rounded = true
+allow_greater = true
+
+[node name="Colors" type="HBoxContainer" parent="Gradient/Generator"]
+layout_mode = 2
+
+[node name="StartColorLabel" type="Label" parent="Gradient/Generator/Colors"]
+layout_mode = 2
+size_flags_horizontal = 10
+text = "Start color:"
+
+[node name="StartColorPickerButton" type="ColorPickerButton" parent="Gradient/Generator/Colors"]
+layout_mode = 2
+size_flags_horizontal = 3
+color = Color(0, 0.029, 0.87, 1)
+
+[node name="Label2" type="Label" parent="Gradient/Generator/Colors"]
+layout_mode = 2
+size_flags_horizontal = 10
+text = "EndColor:"
+
+[node name="EndColorPickerButton2" type="ColorPickerButton" parent="Gradient/Generator/Colors"]
+layout_mode = 2
+size_flags_horizontal = 3
+color = Color(0.856766, 0.18273, 0.678974, 1)
+
+[editable path="Random/Generator/Amount"]
+[editable path="Gradient/Generator/Amount"]
