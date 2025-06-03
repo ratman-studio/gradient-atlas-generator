@@ -31,6 +31,7 @@ mono_crash.*.json
 .idea/**/usage.statistics.xml
 .idea/**/dictionaries
 .idea/**/shelf
+.vscode/*
 
 # AWS User-specific
 .idea/**/aws.xml
@@ -55,12 +56,12 @@ mono_crash.*.json
 # When using Gradle or Maven with auto-import, you should exclude module files,
 # since they will be recreated, and may cause churn.  Uncomment if using
 # auto-import.
-# .idea/artifacts
-# .idea/compiler.xml
-# .idea/jarRepositories.xml
-# .idea/modules.xml
-# .idea/*.iml
-# .idea/modules
+ .idea/artifacts
+ .idea/compiler.xml
+ .idea/jarRepositories.xml
+ .idea/modules.xml
+ .idea/*.iml
+ .idea/modules
 # *.iml
 # *.ipr
 
@@ -99,5 +100,5 @@ fabric.properties
 
 # Android studio 3.1+ serialized cache file
 .idea/caches/build_file_checksums.ser
-
+android
 # End of https://www.toptal.com/developers/gitignore/api/godot,rider
