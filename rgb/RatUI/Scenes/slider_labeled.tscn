@@ -1,0 +1,24 @@
+[gd_scene load_steps=2 format=3 uid="uid://5a8aagat547e"]
+
+[ext_resource type="Script" uid="uid://cmqxprwiddddt" path="res://UI/RatUI/Scenes/slider_labeled_labeled.gd" id="1_rddsu"]
+
+[node name="LabeledSlider" type="HBoxContainer" node_paths=PackedStringArray("label", "control", "label_value")]
+script = ExtResource("1_rddsu")
+label = NodePath("Label")
+control = NodePath("HSlider")
+label_value = NodePath("Value")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 2
+size_flags_horizontal = 0
+text = "Resolution"
+
+[node name="HSlider" type="HSlider" parent="."]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+
+[node name="Value" type="Label" parent="."]
+layout_mode = 2
+text = "99"
+horizontal_alignment = 2

@@ -1,0 +1,16 @@
+[gd_scene load_steps=2 format=3 uid="uid://ro26ekleqvvh"]
+
+[ext_resource type="Script" uid="uid://rw03r5e7hjvq" path="res://UI/RatUI/Scenes/option_button_with_label.gd" id="1_h5wc6"]
+
+[node name="OptionButtonLabeled" type="HBoxContainer" node_paths=PackedStringArray("control")]
+script = ExtResource("1_h5wc6")
+control = NodePath("OptionButon")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 2
+size_flags_horizontal = 0
+text = "Generator"
+
+[node name="OptionButon" type="OptionButton" parent="."]
+layout_mode = 2
+size_flags_horizontal = 3
