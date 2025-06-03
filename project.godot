@@ -15,6 +15,13 @@ run/main_scene="uid://c5p8wdtam4s0x"
 config/features=PackedStringArray("4.4", "GL Compatibility")
 config/icon="res://icon.svg"
 
+[file_customization]
+
+folder_colors={
+"res://UI/": "yellow",
+"res://UI/RatUI/": "orange"
+}
+
 [rendering]
 
 renderer/rendering_method="gl_compatibility"

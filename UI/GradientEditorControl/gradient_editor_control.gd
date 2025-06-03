@@ -19,7 +19,7 @@ func _ready():
 
 	for color_picker_button in color_pickers.keys():
 		color_picker_button.popup_closed.connect(_on_color_changed)
-		color_picker_button.color_changed.connect(_on_color_changed)
+#		color_picker_button.color_changed.connect(_on_color_changed)
 		color_picker_button.picker_created.connect(_on_color_changed)
 	
 	_update_gradient()
