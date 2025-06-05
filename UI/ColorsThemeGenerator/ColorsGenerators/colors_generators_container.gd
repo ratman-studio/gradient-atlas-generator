@@ -1,9 +1,9 @@
 extends TabContainer
-class_name Generators_Container
+class_name ColorsGenerators_Container
 
 func generate_colors() -> Array[Color]:
 	var current = get_current_tab_control()
-	if current is ColorGeneratorController:
+	if current is ColorsGenerator:
 		return current.generate_colors_theme()
 	return []
 

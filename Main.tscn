@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://dt5iap2a422vd" path="res://UI/GradientEditorControl/gradient_editor_control.tscn" id="1_glv2v"]
 [ext_resource type="PackedScene" uid="uid://uxqugx1dvnd8" path="res://UI/ColorsThemeGenerator/colors_theme_generators.tscn" id="1_r0du0"]
-[ext_resource type="PackedScene" uid="uid://5a8aagat547e" path="res://UI/RatUI/Scenes/slider_labeled.tscn" id="1_uu6xs"]
+[ext_resource type="PackedScene" path="res://UI/RatUI/Scenes/slider_labeled.tscn" id="1_uu6xs"]
 [ext_resource type="PackedScene" uid="uid://bl4uejeyd4dey" path="res://UI/GradientGenerator/gradients_generator.tscn" id="2_cm0pq"]
 
 [node name="Node" type="Node"]
