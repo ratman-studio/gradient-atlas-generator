@@ -1,7 +1,7 @@
 extends Container
 
 @export var generate_button:Button
-@export var generators:GradientGenerator_Container
+@export var generators:GradientsGenerators_Container
 @export var color_picker_list: ColorPickerList
 
 @export var gradine_list: GradientList
