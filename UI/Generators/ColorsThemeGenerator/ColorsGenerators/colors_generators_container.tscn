@@ -1,9 +1,9 @@
 [gd_scene load_steps=5 format=3 uid="uid://bb88od8s33txm"]
 
-[ext_resource type="Script" uid="uid://bkumqmbov2qxx" path="res://UI/ColorsThemeGenerator/ColorsGenerators/colors_generators_container.gd" id="1_rle60"]
-[ext_resource type="Script" uid="uid://b4upfvfjr0xd7" path="res://UI/ColorsThemeGenerator/ColorsGenerators/random_colors_generator.gd" id="2_57k2f"]
+[ext_resource type="Script" uid="uid://bkumqmbov2qxx" path="res://UI/Generators/ColorsThemeGenerator/ColorsGenerators/colors_generators_container.gd" id="1_rle60"]
+[ext_resource type="Script" uid="uid://b4upfvfjr0xd7" path="res://UI/Generators/ColorsThemeGenerator/ColorsGenerators/random_colors_generator.gd" id="2_57k2f"]
 [ext_resource type="PackedScene" uid="uid://5a8aagat547e" path="res://rgb/RatUI/Scenes/slider_labeled.tscn" id="3_42unl"]
-[ext_resource type="Script" uid="uid://dbrcypaom7iui" path="res://UI/ColorsThemeGenerator/ColorsGenerators/gradient_colors_generator.gd" id="4_rx685"]
+[ext_resource type="Script" uid="uid://dbrcypaom7iui" path="res://UI/Generators/ColorsThemeGenerator/ColorsGenerators/gradient_colors_generator.gd" id="4_rx685"]
 
 [node name="Generators" type="TabContainer"]
 offset_right = 414.0

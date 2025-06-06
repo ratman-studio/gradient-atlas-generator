@@ -19,7 +19,11 @@ config/icon="res://icon.svg"
 
 folder_colors={
 "res://UI/": "yellow",
-"res://UI/RatUI/": "orange"
+"res://UI/RatUI/": "orange",
+"res://rgb/": "gray",
+"res://rgb/RatUI/": "red",
+"res://rgb/RatUI/Controls/": "green",
+"res://rgb/RatUI/Scenes/": "blue"
 }
 
 [rendering]
