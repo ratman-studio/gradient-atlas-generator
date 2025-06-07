@@ -1,7 +1,7 @@
 extends Container
-class_name ColorsGenerator
+class_name AColorsGenerator
 ## An abstract base class for color theme generators.
-## Classes inheriting from `ColorsGenerator` are expected to implement the
+## Classes inheriting from `AColorsGenerator` are expected to implement the
 ## `generate_colors_theme()` method, which defines how a set of colors is generated.
 ## This class itself provides a placeholder for that method.
 

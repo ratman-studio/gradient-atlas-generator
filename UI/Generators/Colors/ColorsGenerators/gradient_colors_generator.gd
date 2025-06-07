@@ -1,4 +1,4 @@
-extends ColorsGenerator
+extends AColorsGenerator
 class_name Gradient_ColorGeneratorController
 
 @export var _amount_slider: HSliderLabeled

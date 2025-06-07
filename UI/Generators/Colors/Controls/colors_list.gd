@@ -36,7 +36,6 @@ func add_color(color: Color):
 
 
 ## Returns the array of colors currently displayed in the list.
-## @return An Array of Color objects.
 func get_colors() -> Array[Color]:
 	return _colors
 	
