@@ -1,4 +1,4 @@
-extends MarginContainer
+extends AGradientsGenerator
 class_name Pair_Gradients_Generator
 
 @export var feed_type:OptionButtonWithLabel
@@ -13,11 +13,23 @@ func generate_gradients (colors:Array[Color]) -> Array[Gradient]:
 	
 	var gradients:Array[Gradient] 
 	for pair in color_pairs:
-		if pair.size > 1:
-			gradients.append(create_gradient(pair))	
+		var typed_pair:Array[Color] = typed_array_color(pair)
+		if typed_pair.size() > 1:
+			var gradient = create_gradient(typed_pair)
+			gradients.push_back(gradient)	
 	
 	return gradients
-	
+
+func typed_array_color(array:Array) -> Array[Color]:
+	var typed_array:Array[Color] = []
+	for item in array:
+		if item is Color:
+			typed_array.append(item)
+		else:
+			printerr("Item in array is not a Color: ", item)
+
+	return typed_array
+
 func create_gradient(colors : Array[Color]) -> Gradient:
 	var gradient = Gradient.new()
 	var amount = colors.size()

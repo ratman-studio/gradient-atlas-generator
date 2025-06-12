@@ -1,0 +1,7 @@
+[gd_resource type="Resource" script_class="ColorArray" load_steps=2 format=3 uid="uid://bkjl5hwvr25pm"]
+
+[ext_resource type="Script" uid="uid://bx1rd752t47gw" path="res://UI/Generators/Colors/ColorsGenerators/color_array_resource.gd" id="1_0hgw2"]
+
+[resource]
+script = ExtResource("1_0hgw2")
+metadata/_custom_type_script = "uid://bx1rd752t47gw"

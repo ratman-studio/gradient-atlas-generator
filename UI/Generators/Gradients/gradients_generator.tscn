@@ -1,13 +1,14 @@
-[gd_scene load_steps=7 format=3 uid="uid://bl4uejeyd4dey"]
+[gd_scene load_steps=8 format=3 uid="uid://bl4uejeyd4dey"]
 
 [ext_resource type="Script" uid="uid://dp7hpkevk6fqs" path="res://UI/Generators/Gradients/gradients_generator.gd" id="1_aufpf"]
-[ext_resource type="Script" uid="uid://cvnhon1mh8k1d" path="res://UI/Generators/Gradients/GrdientGenerators/pairs_gradient_generator.gd" id="2_nti10"]
-[ext_resource type="Script" uid="uid://c03jr21qlooye" path="res://UI/Generators/Gradients/gradients_generator_container.gd" id="2_tw4q2"]
+[ext_resource type="Script" uid="uid://cvnhon1mh8k1d" path="res://UI/Generators/Gradients/GradientGenerators/pairs_gradient_generator.gd" id="2_nti10"]
+[ext_resource type="Script" uid="uid://c03jr21qlooye" path="res://UI/Generators/Gradients/Controls/gradients_generator_container.gd" id="2_tw4q2"]
 [ext_resource type="PackedScene" uid="uid://5a8aagat547e" path="res://rgb/RatUI/Scenes/slider_labeled.tscn" id="3_4stgq"]
-[ext_resource type="Script" uid="uid://cagaa515fn7kv" path="res://UI/Generators/Colors/colors_list.gd" id="5_pp1cj"]
-[ext_resource type="Script" uid="uid://b06oso73yrl06" path="res://UI/Generators/Gradients/gradien_list.gd" id="6_y33ej"]
+[ext_resource type="Resource" uid="uid://bkjl5hwvr25pm" path="res://UI/Generators/Colors/ColorsGenerators/color_array.tres" id="3_l1tp1"]
+[ext_resource type="Script" uid="uid://cagaa515fn7kv" path="res://UI/Generators/Colors/Controls/colors_list.gd" id="5_pp1cj"]
+[ext_resource type="Script" uid="uid://b06oso73yrl06" path="res://UI/Generators/Gradients/Controls/gradient_list.gd" id="6_y33ej"]
 
-[node name="GradientsGenerator" type="MarginContainer" node_paths=PackedStringArray("generate_button", "generators", "color_picker_list", "gradine_list")]
+[node name="GradientsGenerator" type="MarginContainer" node_paths=PackedStringArray("generate_button", "generators", "color_picker_list", "gradient_list")]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -23,7 +24,7 @@ script = ExtResource("1_aufpf")
 generate_button = NodePath("VBox/GenerateGradients")
 generators = NodePath("VBox/TabContainer")
 color_picker_list = NodePath("VBox/ColorList")
-gradine_list = NodePath("VBox/GradientList")
+gradient_list = NodePath("VBox/GradientList")
 
 [node name="VBox" type="VBoxContainer" parent="."]
 layout_mode = 2
@@ -37,6 +38,7 @@ text = "Gradients Generator"
 [node name="ColorList" type="HFlowContainer" parent="VBox"]
 layout_mode = 2
 script = ExtResource("5_pp1cj")
+_colors = ExtResource("3_l1tp1")
 
 [node name="TabContainer" type="TabContainer" parent="VBox"]
 layout_mode = 2
