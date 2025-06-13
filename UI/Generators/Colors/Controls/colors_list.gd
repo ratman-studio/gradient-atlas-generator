@@ -6,20 +6,14 @@ class_name ColorPickerList
 ## users to view and potentially modify the colors.
 ##
 ## @property _size: The desired size (width, height) for each individual `ColorPickerButton` in the list.
-## @property _colors: An internal array storing the `Color` objects currently displayed in the list.
 @export var _size = Vector2(30, 30)
-
-@export var _colors: ColorArray
-
 
 ## Clears all color pickers from the list and resets the internal color array.
 ## This effectively removes all displayed colors from the UI.
 
 func clear():
-	_colors.clear()
 	for c in get_children():
 		c.queue_free()
-
 
 ## Adds a new color to the list.
 ## A new `ColorPickerButton` is created, configured with the provided color,
@@ -31,12 +25,15 @@ func add_color(color: Color):
 	RatUI.control_fill_horizontal(picker)  # Assumes RatUI is a global utility
 	picker.custom_minimum_size = _size
 
-
 	picker.color = color
 	add_child(picker)
-	_colors.add_color(color)
-
 
 ## Returns the array of colors currently displayed in the list.
-func get_colors() -> PackedColorArray:
-	return _colors.get_colors()
+func get_colors() -> Array[Color]:
+	var _colors : Array[Color] = []
+
+	for i in range(get_child_count()):
+		var child = get_child(i)
+		if child is ColorPickerButton:
+			_colors.append(child.color)
+	return _colors

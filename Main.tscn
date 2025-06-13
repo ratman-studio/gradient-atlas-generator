@@ -33,8 +33,9 @@ layout_mode = 2
 [node name="HSeparator" type="HSeparator" parent="Control/HBoxContainer/GradientGenerator"]
 layout_mode = 2
 
-[node name="GradientsGenerator" parent="Control/HBoxContainer/GradientGenerator" instance=ExtResource("2_cm0pq")]
+[node name="GradientsGenerator" parent="Control/HBoxContainer/GradientGenerator" node_paths=PackedStringArray("color_picker_list") instance=ExtResource("2_cm0pq")]
 layout_mode = 2
+color_picker_list = NodePath("../ColorThemeGenerator/HBoxContainer/ScrollContainer/Colors")
 
 [node name="HSeparator2" type="HSeparator" parent="Control/HBoxContainer/GradientGenerator"]
 layout_mode = 2
@@ -106,6 +107,7 @@ NodePath("ColorPickers/ColorPickerButton"): 0.0,
 NodePath("ColorPickers/ColorPickerButton2"): 0.99
 }
 
+[editable path="Control/HBoxContainer/GradientGenerator/ColorThemeGenerator"]
 [editable path="Control/HBoxContainer/GradientGenerator/AtlasGenerator/MarginContainer/VBoxContainer/Resolution"]
 [editable path="Control/HBoxContainer/GradientGenerator/AtlasGenerator/MarginContainer/VBoxContainer/Gradients"]
 [editable path="Control/HBoxContainer/GradientGenerator/AtlasGenerator/MarginContainer/VBoxContainer/Rows"]

@@ -13,6 +13,10 @@ func set_gradient(gradient: Gradient):
 	var height = 20
 	
 	gradient_texture = GradientTexture2D.new()
+	gradient_texture.fill_from = Vector2(0, 0)
+
+	gradient_texture.fill_to = Vector2(0, 1)
+
 	gradient_texture.gradient = gradient
 	
 	gradient_texture.width = width
